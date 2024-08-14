@@ -1,0 +1,66 @@
+﻿@model SIMS_SE06205.Models.TeacherViewModel
+
+@{
+    ViewData["title"] = "Add New Teacher";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col col-sm-12 col-md-12 p-3">
+        <div class="card">
+            <div class="card-header">
+                <h5>Add New Teacher</h5>
+            </div>
+            <div class="card-body">
+                <form enctype="multipart/form-data" asp-action="Add" method="post">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group mb-3">
+                                <label asp-for="TeacherCode" class="control-label"></label>
+                                <input asp-for="TeacherCode" class="form-control" />
+                                <span asp-validation-for="TeacherCode" class="text-danger"></span>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label asp-for="TeacherName" class="control-label"></label>
+                                <input asp-for="TeacherName" class="form-control" />
+                                <span asp-validation-for="TeacherName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label asp-for="Email" class="control-label"></label>
+                                <input asp-for="Email" class="form-control" type="email" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label asp-for="Phone" class="control-label"></label>
+                                <input asp-for="Phone" class="form-control" type="tel" pattern="\d{10}" maxlength="10" />
+                                <span asp-validation-for="Phone" class="text-danger"></span>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label asp-for="Address" class="control-label"></label>
+                                <input asp-for="Address" class="form-control" />
+                            </div>
+                            <div class="form-group mb-3">
+                                <label asp-for="Gender" class="control-label"></label>
+                                <select asp-for="Gender" class="form-control">
+                                    <option value="">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <button class="btn btn-primary btn-sm" type="submit">Save</button>
+                                <a class="btn btn-info btn-sm" href="@Url.Action("Index", "Teacher")">Back to List</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

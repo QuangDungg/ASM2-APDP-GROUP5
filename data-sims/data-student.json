@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1",
+    "StudentCode": "123",
+    "StudentName": "Dung",
+    "Birthday": "2003-02-12T00:00:00",
+    "Address": "Ha Noi",
+    "Gender": "Male",
+    "Phone": "0978959782",
+    "Email": "dung61132@gmail.com"
+  },
+  {
+    "Id": "2",
+    "StudentCode": "BH002",
+    "StudentName": "Nguyen Van B",
+    "Birthday": "2010-03-30T00:00:00",
+    "Address": "Ho Chi Minh",
+    "Gender": "Other",
+    "Phone": "0978934782",
+    "Email": null
+  },
+  {
+    "Id": "3",
+    "StudentCode": "BH003",
+    "StudentName": "Tran Thi C",
+    "Birthday": "2024-08-13T00:00:00",
+    "Address": "Ha Noi",
+    "Gender": "Female",
+    "Phone": "0998969782",
+    "Email": null
+  },
+  {
+    "Id": "4",
+    "StudentCode": "BH004",
+    "StudentName": "Tran Quang D",
+    "Birthday": "2007-11-13T00:00:00",
+    "Address": "Da Nang",
+    "Gender": "Female",
+    "Phone": "0978954382",
+    "Email": null
+  }
+]

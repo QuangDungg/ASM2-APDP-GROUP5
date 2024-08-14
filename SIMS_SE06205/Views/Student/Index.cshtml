@@ -1,0 +1,87 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model SIMS_SE06205.Models.StudentModel;
+@{
+    ViewData["title"] = "Student managment";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    bool statusAdd = Convert.ToBoolean(TempData["saveStatus"]);
+    bool statusDel = Convert.ToBoolean(TempData["DeleteStatus"]);
+    bool statusUpdate = Convert.ToBoolean(TempData["UpdateStatus"]);
+}
+<div class="row">
+    <div class="col col-sm-12 col-md-12 p-3">
+        <h3> List Student</h3>
+        <a class="btn btn-primary btn-sm my-2" href="@Url.Action("Add","Student")"> Add Student </a>
+
+        @if (TempData["saveStatus"] != null)
+        {
+            @if (statusAdd)
+            {
+                <div class="text-success my-2"> Add Successfully</div>
+            }
+            else
+            {
+                <div class="text-danger my-2"> Add Failure</div>
+            }
+        }
+        @if (TempData["DeleteStatus"] != null)
+        {
+            @if (statusDel)
+            {
+                <div class="text-success my-2"> Deleted Successfully</div>
+            }
+            else
+            {
+                <div class="text-danger my-2"> Deleted Failure</div>
+            }
+        }
+        @if (TempData["UpdateStatus"] != null)
+        {
+            @if (statusUpdate)
+            {
+                <div class="text-success my-2"> Updated Successfully</div>
+            }
+            else
+            {
+                <div class="text-danger my-2"> Updated Failure</div>
+            }
+        }
+
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Student Code</th>
+                    <th>Student Name</th>
+                    <th>Birthday</th>
+                    <th>Address</th>
+                    <th>Gender</th>
+                    <th>Phone</th>
+                    <th colspan="2" width="5%">ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.StudentsList)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.StudentCode</td>
+                        <td>@item.StudentName</td>
+                        <td>@item.Birthday</td>
+                        <td>@item.Address</td>
+                        <td>@item.Gender</td>
+                        <td>@item.Phone</td>
+                        <td>
+                            <a class="btn btn-info btn-sm" href="@Url.Action("Update","Student", new { id = @item.Id })">Edit</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-danger btn-sm" href="@Url.Action("Delete","Student", new { id = @item.Id })">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

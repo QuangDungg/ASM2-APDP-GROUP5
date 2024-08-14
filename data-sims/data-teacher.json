@@ -1,0 +1,56 @@
+[
+  {
+    "Id": "1",
+    "TeacherCode": "BH001",
+    "TeacherName": "Tran Van A",
+    "Birthday": "1993-02-12",
+    "Address": "Ha Noi",
+    "Gender": "Male",
+    "Phone": "0876534562"
+    "Email":"a@gmail.com"
+  },
+  {
+    "Id": "2",
+    "TeacherCode": "BH002",
+    "TeacherName": "Ta Ngoc Linh",
+    "Birthday": "1993-02-1",
+    "Address": "Hai Phong",
+    "Gender": "Male",
+    "Phone": "0911114342"
+    "Email":"b@gmail.com"
+
+  },
+  {
+    "Id": "3",
+    "TeacherCode": "BH003",
+    "TeacherName": "Nguyen Thi Lan",
+    "Birthday": "1988-12-12",
+    "Address": "Ha Nam",
+    "Gender": "Female",
+    "Phone": "0987654111"
+    "Email":"c@gmail.com"
+
+  },
+  {
+    "Id": "4",
+    "TeacherCode": "BH004",
+    "TeacherName": "Tran Van Nguyen",
+    "Birthday": "1983-07-22",
+    "Address": "Hai Duong",
+    "Gender": "Male",
+    "Phone": "02345678765"
+    "Email":"v@gmail.com"
+
+  },
+  {
+    "Id": "5",
+    "TeacherCode": "BH005",
+    "TeacherName": "Ta Linh Nam",
+    "Birthday": "1989-02-02",
+    "Address": "Phu THo",
+    "Gender": "Female",
+    "Phone": "8765432345"
+    "Email":"oo@gmail.com"
+
+  }
+]
